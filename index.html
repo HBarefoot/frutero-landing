@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frutero — Mushroom Farm Controller</title>
+  <meta name="description" content="Open-source Raspberry Pi controller for mushroom grows. Local-first, no SaaS rent. AI contamination advisor, multi-chamber fleet management.">
+  <meta property="og:title" content="Frutero — Mushroom Farm Controller">
+  <meta property="og:description" content="One dashboard for all your grow chambers. Local-first, no SaaS rent.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://frutero.io">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon">▟</span>
+        <span class="logo-text">frutero</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="https://github.com/HBarefoot/frutero" target="_blank">GitHub</a>
+        <a href="https://frutero-fleet-production.up.railway.app" class="btn btn-ghost">Dashboard</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Open-source Raspberry Pi controller
+      </div>
+      <h1 class="hero-title">
+        Run your grow chamber<br>
+        <span class="accent">without paying SaaS rent.</span>
+      </h1>
+      <p class="hero-subtitle">
+        Frutero is a local-first controller for monotub fruiting chambers.
+        Schedule lights, mist by humidity, stream your camera, and get AI contamination warnings
+        — all on your Pi, no account required.
+      </p>
+      <div class="hero-cta">
+        <a href="https://frutero-fleet-production.up.railway.app" class="btn btn-primary">Start free trial</a>
+        <a href="https://github.com/HBarefoot/frutero" class="btn btn-secondary">View on GitHub</a>
+      </div>
+      <p class="hero-note">Free Hobby tier — 1 chamber, always free. No credit card.</p>
+    </div>
+  </section>
+
+  <section class="demo">
+    <div class="demo-frame">
+      <div class="demo-header">
+        <div class="demo-dot red"></div>
+        <div class="demo-dot yellow"></div>
+        <div class="demo-dot green"></div>
+        <span class="demo-title">frutero dashboard</span>
+      </div>
+      <div class="demo-body">
+        <div class="demo-sidebar">
+          <div class="nav-item active">Overview</div>
+          <div class="nav-item">Batches</div>
+          <div class="nav-item">Schedules</div>
+          <div class="nav-item">Sensors</div>
+          <div class="nav-item">Camera</div>
+        </div>
+        <div class="demo-main">
+          <div class="demo-stats">
+            <div class="stat-card">
+              <div class="stat-label">Temperature</div>
+              <div class="stat-value">72.4°F</div>
+              <div class="stat-trend good">optimal</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Humidity</div>
+              <div class="stat-value">87%</div>
+              <div class="stat-trend good">optimal</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">CO2</div>
+              <div class="stat-value">420 ppm</div>
+              <div class="stat-trend warn">elevated</div>
+            </div>
+          </div>
+          <div class="demo-alert">
+            <div class="alert-icon">⚡</div>
+            <div class="alert-text">
+              <strong>AI Advisor</strong>
+              <p>Temperature spiked 4°F since yesterday. Check ventilation. No contamination risk detected in latest image.</p>
+            </div>
+          </div>
+          <div class="demo-graph">
+            <div class="graph-placeholder">Temperature trend — last 24h</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <div class="container">
+      <h2 class="section-title">Built for growers, not for VCs.</h2>
+      <p class="section-subtitle">
+        Every feature exists because a grower needed it. Not because it looks good in a pitch deck.
+      </p>
+      <div class="grid">
+        <div class="feature">
+          <div class="feature-icon">🧠</div>
+          <h3>AI Advisor</h3>
+          <p>Claude or Ollama reads your sensor trends and camera images. Flags contamination risk, pinning issues, and temperature drift before they kill a batch.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📸</div>
+          <h3>Live Camera & Timelapse</h3>
+          <p>Stream your chamber over LAN. Snapshots from the dashboard. Auto-generated timelapse when you archive a batch.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">💧</div>
+          <h3>Smart Mist Control</h3>
+          <p>Mist triggers below your humidity threshold. Safety clamps prevent dry-fires — max-on, min-off, and daily cap enforced at the GPIO layer.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🌅</div>
+          <h3>Photoperiod Scheduling</h3>
+          <p>12/12 light cycles (or any cron). Boot-time state restore brings actuators back to the right state after a Pi reboot.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📊</div>
+          <h3>Batch Tracking</h3>
+          <p>Track every grow from inoculation to harvest. Phase transitions, yield per batch, AI retrospective when you archive.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🔔</div>
+          <h3>Smart Alerts</h3>
+          <p>Telegram, email, webhook, or browser push. Notified when sensors go silent, temperature drifts, or AI spots contamination.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works" class="how">
+    <div class="container">
+      <h2 class="section-title">One chamber is free. Scale when you need to.</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Install on your Pi</h3>
+          <p>One command: <code>./install.sh</code>. Node.js, SQLite, systemd service, TLS cert — all handled. Idempotent, so re-run anytime.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Connect hardware</h3>
+          <p>2-channel relay, DHT22 sensor, USB camera, ultrasonic mister. Standard GPIO pinout — no soldering skills required.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Grow locally forever</h3>
+          <p>Fully functional without ever signing up. Your data stays on your Pi.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h3>Upgrade to Fleet (optional)</h3>
+          <p>Connect additional chambers to the cloud dashboard. One view, cross-chamber comparisons, fleet-wide AI insights.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="pricing">
+    <div class="container">
+      <h2 class="section-title">Simple pricing. No surprises.</h2>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-name">Hobby</div>
+          <div class="pricing-price">$0</div>
+          <div class="pricing-period">forever</div>
+          <ul class="pricing-features">
+            <li>1 chamber</li>
+            <li>Full local controller</li>
+            <li>AI advisor</li>
+            <li>Camera & timelapse</li>
+            <li>Batch tracking</li>
+            <li>Browser alerts</li>
+          </ul>
+          <a href="https://github.com/HBarefoot/frutero" class="btn btn-ghost">Install now</a>
+        </div>
+        <div class="pricing-card featured">
+          <div class="pricing-badge">Most popular</div>
+          <div class="pricing-name">Grower</div>
+          <div class="pricing-price">$9</div>
+          <div class="pricing-period">per chamber / month</div>
+          <ul class="pricing-features">
+            <li>Unlimited chambers</li>
+            <li>Multi-chamber dashboard</li>
+            <li>Cross-chamber compare</li>
+            <li>Fleet-wide AI insights</li>
+            <li>Web push to your phone</li>
+            <li>Team access with roles</li>
+            <li>Audit log</li>
+            <li>Remote SSH terminal</li>
+          </ul>
+          <a href="https://frutero-fleet-production.up.railway.app" class="btn btn-primary">Start free trial</a>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-name">Farm</div>
+          <div class="pricing-price">$19</div>
+          <div class="pricing-period">per chamber / month</div>
+          <ul class="pricing-features">
+            <li>Everything in Grower</li>
+            <li>API access</li>
+            <li>Priority support</li>
+            <li>Custom integrations</li>
+            <li>Onboarding call</li>
+            <li>SLA guarantee</li>
+          </ul>
+          <a href="mailto:henrybarefoot1987@gmail.com" class="btn btn-ghost">Contact us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="container">
+      <h2 class="section-title">Questions</h2>
+      <div class="faq-list">
+        <details>
+          <summary>Is my data going to the cloud?</summary>
+          <p>No. The Pi controller stores everything locally in SQLite. You can run it forever without ever connecting to the internet. The cloud Fleet is opt-in, and even then the Pi only makes outbound connections.</p>
+        </details>
+        <details>
+          <summary>What hardware do I need?</summary>
+          <p>A Raspberry Pi 4B, a 2-channel relay module, a DHT22 temperature/humidity sensor, and optionally a USB camera and ultrasonic mister. Full pinout in the repo docs.</p>
+        </details>
+        <details>
+          <summary>Can I run this on Ubuntu or macOS?</summary>
+          <p>Yes. The controller works on any Debian-based Linux or macOS for development. GPIO obviously needs a Pi for real hardware control, but the dev mode with stubbed sensors runs anywhere.</p>
+        </details>
+        <details>
+          <summary>Do you sell hardware kits?</summary>
+          <p>Not yet. We publish the exact BOM so you can source parts yourself from Amazon, Adafruit, or AliExpress.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>Stop checking humidifiers one by one.</h2>
+      <p>Get the free controller now. Upgrade to Fleet when you outgrow the kitchen counter.</p>
+      <div class="cta-buttons">
+        <a href="https://frutero-fleet-production.up.railway.app" class="btn btn-primary">Start free trial</a>
+        <a href="https://github.com/HBarefoot/frutero" class="btn btn-secondary">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <span class="logo-icon">▟</span>
+          <span>frutero</span>
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/HBarefoot/frutero">GitHub</a>
+          <a href="https://frutero-fleet-production.up.railway.app">Dashboard</a>
+          <a href="mailto:henrybarefoot1987@gmail.com">Contact</a>
+        </div>
+        <p class="footer-copy">Open source. Built by growers, for growers.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
