@@ -1,0 +1,10 @@
+I built an open-source grow chamber controller
+
+Local-first, Pi-based: schedules, automations, real-time monitoring, video stream, AI contamination advisor. One-time hardware cost (~$40), runs standalone forever.
+
+Also has optional fleet management — one dashboard for multiple chambers.
+
+GitHub: https://github.com/HBarefoot/frutero
+Demo + trial: https://frutero-landing.vercel.app
+
+Questions welcome — I can also share hardware sourcing links if people are interested.

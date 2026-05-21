@@ -1,0 +1,14 @@
+[OC] Frutero — open-source self-hosted mushroom farm controller
+
+Runs on a Pi 4B. No cloud required. Full stack: Node.js, SQLite, systemd, self-hosted TLS.
+
+- 12/12 photoperiod with cron + boot recovery
+- Humidity-triggered mist with safety clamps (max-on, min-off, daily cap)  
+- USB camera stream over LAN
+- Claude/Ollama contamination advisor
+- Batch tracking + auto timelapse
+- Telegram/email/webhook alerts
+- Browser SSH terminal
+- Optional Fleet cloud for multi-chamber ($9/chamber)
+
+GitHub: https://github.com/HBarefoot/frutero

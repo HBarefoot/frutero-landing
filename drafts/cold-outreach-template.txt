@@ -1,0 +1,18 @@
+Subject: Frutero — controller for your grow chambers
+
+Hi {name},
+
+I came across your {shop/profile} selling {product}. I'm the builder of Frutero — an open-source Raspberry Pi controller for mushroom fruiting chambers.
+
+I built it because I was checking humidifiers on 4 chambers every morning. Now it automates misting, lights, tracks batches, and even uses AI to spot contamination early.
+
+The controller is free (one chamber, runs locally). Fleet cloud is $9/chamber for managing multiple chambers in one dashboard.
+
+Wanted to offer you a free 30-day Fleet trial — no setup changes needed if you're already running Pi-based monitoring.
+
+Interested in checking it out?
+
+https://frutero-landing.vercel.app
+https://github.com/HBarefoot/frutero
+
+— Henry

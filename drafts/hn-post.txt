@@ -1,0 +1,16 @@
+Show HN: Open-source mushroom grow controller for Raspberry Pi
+
+I built Frutero because I was tired of checking 4 humidifiers every morning before work.
+
+It's a local-first controller that runs on a Pi 4B: schedules lights, mists by humidity threshold, streams a USB camera, and has an AI advisor (Claude/Ollama) that reads sensor trends + camera images to flag contamination and pinning issues.
+
+Key point: it's fully functional on the Pi without signing up for anything. No account. No cloud dependency. Your data stays on your SD card.
+
+The cloud Fleet tier is optional and only for people running >1 chamber who want one dashboard and remote monitoring.
+
+Hardware: Pi 4B, 2-channel relay, DHT22, USB camera, ultrasonic mister (~$40 in parts). Full GPIO pinout in the repo.
+
+GitHub: https://github.com/HBarefoot/frutero
+Landing + free trial: https://frutero-landing.vercel.app
+
+What I learned building it: GPIO scheduling that survives reboots, boot-time state restoration, and why you need safety clamps when a mister can destroy a batch by dry-firing.
